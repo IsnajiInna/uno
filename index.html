@@ -3,115 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Monthsary!</title>
+  <title>uno</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: #fff8f0;
+      background: linear-gradient(to bottom right, #ffe0f0, #ffd6ec);
       font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #d6336c;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0;
-      padding: 1em;
-      box-sizing: border-box;
-      color: #ff4d88;
+      padding: 20px;
     }
 
     h1 {
       font-size: 2.2em;
       text-align: center;
-      animation: pop 1s ease-in-out infinite alternate;
       margin-bottom: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 1.5em;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      position: relative;
-    }
-
-    .card img.couple {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 1em;
-      object-fit: cover;
-    }
-
-    .card p {
-      font-size: 1.2em;
-      line-height: 1.5;
-    }
-
-    .heart {
-      color: red;
-      font-size: 2em;
-      animation: beat 0.6s infinite alternate;
-      margin-top: 15px;
-    }
-
-    /* 🌻 Sunflower CSS */
-    .sunflower {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin: 40px auto;
-    }
-
-    .sunflower .petal {
-      position: absolute;
-      width: 40px;
-      height: 80px;
-      background: orange;
-      border-radius: 50%;
-      transform-origin: 50% 100%;
-      top: 0;
-    }
-
-    .sunflower .petal:nth-child(1) {
-      transform: rotate(0deg);
-    }
-
-    .sunflower .petal:nth-child(2) {
-      transform: rotate(45deg);
-    }
-
-    .sunflower .petal:nth-child(3) {
-      transform: rotate(90deg);
-    }
-
-    .sunflower .petal:nth-child(4) {
-      transform: rotate(135deg);
-    }
-
-    .sunflower .petal:nth-child(5) {
-      transform: rotate(180deg);
-    }
-
-    .sunflower .petal:nth-child(6) {
-      transform: rotate(225deg);
-    }
-
-    .sunflower .petal:nth-child(7) {
-      transform: rotate(270deg);
-    }
-
-    .sunflower .petal:nth-child(8) {
-      transform: rotate(315deg);
-    }
-
-    .sunflower .center {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: yellow;
-      border-radius: 50%;
-      top: 35px;
-      left: 35px;
+      animation: pop 1s ease-in-out infinite alternate;
+      color: #ff4d88;
     }
 
     @keyframes pop {
@@ -119,37 +34,94 @@
       100% { transform: scale(1.05); }
     }
 
+    .card {
+      background: #fff0f6;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(255, 105, 180, 0.2);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 15px;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+    }
+
+    .message {
+      font-size: 1.1em;
+      line-height: 1.5;
+      margin-top: 10px;
+      color: #cc3366;
+    }
+
+    .heart {
+      font-size: 2em;
+      margin-top: 10px;
+      animation: beat 0.6s infinite alternate;
+      color: #ff3366;
+    }
+
     @keyframes beat {
       0% { transform: scale(1); }
       100% { transform: scale(1.3); }
     }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .message {
+        font-size: 1em;
+      }
+
+      .gallery img {
+        max-width: 45%;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>💞 Happy Monthsary! 💞</h1>
+
+  <h1>💞 Happy Monthsary, Love! 💞</h1>
+
+  <!-- 🎵 Optional YouTube Background Music -->
+  <audio autoplay loop>
+    <source src="98º - I Do (Cherish You) [1kofixtz2Us].mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
   <div class="card">
-    <!-- 🌻 Sunflower using CSS -->
-    <div class="sunflower">
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="center"></div>
+    <!-- 💑 Photo Gallery -->
+    <div class="gallery">
+      <img src="Screenshot 2025-04-13 232637.png" alt="Cute Pic 1" />
+      <img src="Screenshot 2025-04-13 233838.png" alt="Cute Pic 2" />
+      <img src="Screenshot 2025-04-13 234031.png" alt="Cute Pic 3" />
+      <img src="Screenshot 2025-04-13 234125.png" alt="Cute Pic 4" />
     </div>
 
-    <!-- 👫 Couple photo -->
-    <img src="us.jpg" alt="Us Together" class="couple" />
-
-    <!-- 💬 Message -->
-    <p>To the sweetest person ever,</p>
-    <p>Thank you for being my sunshine and always making me smile.</p>
-    <p>I’m so lucky to have you. More months to come, baby!</p>
-    <p class="heart">❤️ I love you! ❤️</p>
+    <!-- 📝 Message -->
+    <div class="message">
+        <p>Hello bebe ko!</p>
+        <p>It's our first monthsary and I just want to make it extra special so ginawa ko 'tong mini website saglitan lang kase yk sunod-sunod na araw tayong magkasama baby. </p>
+        <p>Just always remember that I'll always love you baby, kahit araw-araw ka pang magdabog sa'kin mweeheehee</p>
+        <p class="heart">❤️Iloveyouuuuuuuu big time!!!❤️</p>
+    </div>
   </div>
+
 </body>
 </html>
